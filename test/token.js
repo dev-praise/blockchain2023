@@ -16,6 +16,7 @@ describe("Token", () => {
 		accounts = await ethers.getSigners()
 		deployer = accounts[0]
 		receiver = accounts[1]
+		exhanger = accounts[2]	
 	})
 
 	describe('Deployment', () => {
@@ -97,6 +98,25 @@ describe("Token", () => {
 
 		})
 
+
+	})
+
+	describe('Approving Tokens', () => {
+
+		describe('success', () => {
+			let amount, transaction, results
+			beforeEach( async() =>{
+				 amount = weitoken(100)
+				 transaction = await token.connect(deployer).approve(exhanger.address, amount) 
+				 result = await transaction.wait()
+			})
+
+			it ('allocates delegated tokens for spending' async() => {
+
+			})
+		})
+
+		describe('Failure', () => {})
 
 	})
 	
