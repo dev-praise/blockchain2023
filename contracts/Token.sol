@@ -35,7 +35,7 @@ contract Token {
 
 	function _transfer(address _from, address _to, uint256 _value) internal {
 
-		require(_to != address(0));
+		require(_to != address(0), 'jhy');
 
 		balanceOf[_from] -= _value;
 		balanceOf[_to] += _value;
@@ -63,9 +63,9 @@ contract Token {
 
 	function transferFrom(address _from, address _to, uint256 _value) public returns(bool success){
 
-		require(_value <= balanceOf[_from]);
+		require(_value <= balanceOf[_from], 'io');
 
-		require(_value <= allowance[_from][msg.sender]);
+		require(_value <= allowance[_from][msg.sender], 'ingty');
 
 		allowance[_from][msg.sender] -= _value;
 
