@@ -15,7 +15,7 @@ const wait = (seconds) => {
 async function main(){
 	const accounts = await ethers.getSigners()
 
-	const { chainId } = await ethers.provider.getNetwork()
+	const { chainId } = await ethers.provider.getNetwork()	
 	console.log("Using chainID:", chainId)
 
 	const DApp = await ethers.getContractAt('Token', config[chainId].DApp.address)
