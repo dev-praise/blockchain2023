@@ -11,6 +11,7 @@ import {
 }  from '../store/interactions.js';
 
 import Navbar from './Navbar'
+import Markets from './markets'
 
 
 function App() {
@@ -61,7 +62,7 @@ function App() {
       <main className='exchange grid'>
         <section className='exchange__section--left grid'>
 
-          {/* Markets */}
+          <Markets />
 
           {/* Balance */}
 
