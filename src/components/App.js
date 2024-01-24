@@ -12,6 +12,7 @@ import {
 
 import Navbar from './Navbar'
 import Markets from './markets'
+import Balance from './Balance'
 
 
 function App() {
@@ -64,7 +65,7 @@ function App() {
 
           <Markets />
 
-          {/* Balance */}
+          <Balance />
 
           {/* Order */}
 
